@@ -1,0 +1,59 @@
+<!--
+    File: index.html
+    Purpose: GUI Assignment Homework 3. Generating an dynamic multiplicative table basing on user inputs, using HTML, CSS, and JavaScript
+    Author: Jen Yuan Shih (JenYuan_Shih@student.uml.edu)
+    Last Updated: 10/25/2021 3:48PM EST
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dynamic Multiplicative Table Generator</title>
+    <meta charset="utf-8">
+    <link href="css/styles.css" rel="stylesheet">
+    <meta name=viewport content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div>
+        <h1>Dynamic Multiplicative Table Generator</h1>
+    </div>
+    <!-- HTML Forms, accept user inputs that which will be send to JavaScript for table generation upon submission. -->
+    <!-- Currently accept 4 inputs (Column Min, Column Max, Row Min, Row Max)-->
+    <div id="formWrapper" class="formTableWrapper">
+        <form id="tableForm">
+            <div class = "form-box">
+                <label for="col-min">Min Column Value:</label>
+                <div class = "input-box">
+                    <input type = "text" id="col-min">
+                </div>
+            </div>
+            <div class = "form-box">
+                <label for="col-max">Max Column Value:</label>
+                <div class = "input-box">
+                    <input type = "text" id="col-max">
+                </div>
+                
+            </div>
+            <div class = "form-box">
+                <label for="row-min">Min Row Value:</label>
+                <div class = "input-box">
+                    <input type = "text" id="row-min">
+                </div>
+            </div>
+            <div class = "form-box">
+                <label for="row-max">Max Row Value:</label>
+                <div class = "input-box">
+                    <input type = "text" id="row-max">
+                </div>
+            </div>
+            <input type="button" value="Create Table" id="submit_button">
+        </form>
+        <div id="error_msg">
+        </div>
+    </div>
+    
+    <!-- An currently empty div that will be holding the dynamically generated table from JavaScript-->
+    <div id="tableWrapper" class="formTableWrapper">
+    </div>
+    <script src="js/table.js"></script>
+</body>
+</html>
